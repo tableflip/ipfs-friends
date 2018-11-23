@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "> get by with a little help from your friends (to share files)",
   "main": "index.js",
+  "bin": {
+    "friends": "bin.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +19,7 @@
     "inquirer": "^6.2.0",
     "inquirer-command-prompt": "0.0.8",
     "ipfs-api": "^26.1.2",
+    "ora": "^3.0.0",
     "pretty-columns": "^1.1.0"
   },
   "devDependencies": {},

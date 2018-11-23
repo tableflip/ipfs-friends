@@ -2,12 +2,10 @@ const FriendDaemon = require('./lib/friends')
 const IpfsApi = require('ipfs-api')
 const repl = require('./repl')
 
-module.exports = async function (argv, opts) {
-  argv = (argv || process.argv).slice(2)
+module.exports = async function (opts) {
   opts = opts || {}
-
   const ctx = await getInitialCtx()
-  repl(ctx, opts)
+  return repl(ctx, opts)
 }
 
 async function getInitialCtx () {
@@ -17,6 +15,9 @@ async function getInitialCtx () {
   friendDaemon
     .on('message:share', ({ peerName, peerId, cid, shareName }) => {
       console.log(`${peerName} shared ${shareName} ${cid}`)
+    })
+    .on('message:shared', ({ peerName, peerId, cid, shareName }) => {
+      console.log(`${peerName} got ${shareName} 🙌`)
     })
     .on('message:online', ({ peerName }) => {
       console.log(`${peerName} is here ✨🎷🐩`)

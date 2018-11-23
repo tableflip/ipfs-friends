@@ -1,5 +1,6 @@
-exports.help = require('./help')
 exports.add = require('./add')
 exports.dump = require('./dump')
-exports.ls = require('./ls')
 exports.exit = require('./exit')
+exports.help = require('./help')
+exports.ls = require('./ls')
+exports.share = require('./share')

@@ -4,8 +4,8 @@ const { read } = require('./read')
 const { evaluate } = require('./eval')
 const print = require('./print')
 const loop = require('./loop')
-// const { withAutoComplete } = require('./auto-complete')
-// const { withSpin } = require('./spinner')
+const { withAutoComplete } = require('./auto-complete')
+const { withSpin } = require('./spinner')
 
 module.exports = async function repl (ctx, opts) {
   opts = opts || {}
@@ -15,8 +15,8 @@ ${Chalk.bold('...get by with a little help from your friends')}
 Type "help" then <Enter> for a list of commands.
 `)
 
-  opts.read = opts.read || read
-  opts.evaluate = opts.evaluate || evaluate
+  opts.read = opts.read || withAutoComplete(read)
+  opts.evaluate = opts.evaluate || withSpin(evaluate)
 
   return loop(async function rep () {
     const { input } = await opts.read(ctx)

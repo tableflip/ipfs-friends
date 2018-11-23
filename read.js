@@ -3,7 +3,9 @@ const InquirerCommandPrompt = require('inquirer-command-prompt')
 
 Inquirer.registerPrompt('command', InquirerCommandPrompt)
 
-exports.read = () => {
-  const question = { type: 'command', name: 'input', message: '>' }
-  return Inquirer.prompt([question])
-}
+exports.read = ctx => Inquirer.prompt([{
+  type: 'command',
+  name: 'input',
+  message: '>',
+  autoCompletion: ctx.autoComplete
+}])
