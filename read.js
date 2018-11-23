@@ -7,5 +7,6 @@ exports.read = ctx => Inquirer.prompt([{
   type: 'command',
   name: 'input',
   message: '>',
-  autoCompletion: ctx.autoComplete
+  autoCompletion: ctx.autoComplete,
+  prefix: ''
 }])
