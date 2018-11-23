@@ -14,9 +14,9 @@ async function getInitialCtx () {
 
   friendDaemon
     .on('message:share', ({ peerName, peerId, cid, shareName }) => {
-      console.log(`${peerName} shared ${shareName} ${cid}`)
+      console.log(`🎁 ${peerName} shared ${shareName} ${cid}`)
     })
-    .on('message:shared', ({ peerName, peerId, cid, shareName }) => {
+    .on('message:shared', ({ peerName, peerId, shareName }) => {
       console.log(`${peerName} got ${shareName} 🙌`)
     })
     .on('message:online', ({ peerName }) => {
