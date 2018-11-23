@@ -10,10 +10,13 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
+    "cli-columns": "^3.1.2",
+    "cli-table": "^0.3.1",
     "debug": "^4.1.0",
     "inquirer": "^6.2.0",
     "inquirer-command-prompt": "0.0.8",
-    "ipfs-api": "^26.1.2"
+    "ipfs-api": "^26.1.2",
+    "pretty-columns": "^1.1.0"
   },
   "devDependencies": {},
   "repository": {
