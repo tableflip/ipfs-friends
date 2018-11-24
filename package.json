@@ -1,6 +1,6 @@
 {
   "name": "ipfs-friends",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "get by with a little help from your friends (to share files)",
   "main": "index.js",
   "bin": {
@@ -13,8 +13,6 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
-    "cli-columns": "^3.1.2",
-    "cli-table": "^0.3.1",
     "debug": "^4.1.0",
     "inquirer": "^6.2.0",
     "inquirer-command-prompt": "0.0.8",
