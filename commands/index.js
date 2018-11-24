@@ -1,4 +1,5 @@
 exports.add = require('./add')
+exports.config = require('./config')
 exports.dump = require('./dump')
 exports.exit = require('./exit')
 exports.help = require('./help')
