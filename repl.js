@@ -1,5 +1,5 @@
 const debug = require('debug')('ipfs-friends:repl')
-const Chalk = require('chalk')
+
 const { read } = require('./read')
 const { evaluate } = require('./eval')
 const print = require('./print')
@@ -9,11 +9,6 @@ const { withSpin } = require('./spinner')
 
 module.exports = async function repl (ctx, opts) {
   opts = opts || {}
-
-  console.log(`
-${Chalk.bold('...get by with a little help from your friends')}
-Type "help" then <Enter> for a list of commands.
-`)
 
   opts.read = opts.read || withAutoComplete(read)
   opts.evaluate = opts.evaluate || withSpin(evaluate)

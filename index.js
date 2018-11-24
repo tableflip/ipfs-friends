@@ -1,10 +1,13 @@
-const FriendDaemon = require('./lib/friends')
 const IpfsApi = require('ipfs-api')
+const Chalk = require('chalk')
+const FriendDaemon = require('./lib/friends')
 const repl = require('./repl')
 
 module.exports = async function (opts) {
   opts = opts || {}
+  console.log(Chalk.bold('...get by with a little help from your 👫👭👬'))
   const ctx = await getInitialCtx()
+  console.log('Type "help" then <Enter> for a list of commands.')
   return repl(ctx, opts)
 }
 
