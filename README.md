@@ -1,5 +1,7 @@
 # ipfs-friends
 
+[![Build Status](https://travis-ci.org/tableflip/ipfs-friends.svg?branch=master)](https://travis-ci.org/tableflip/ipfs-friends) [![dependencies Status](https://david-dm.org/tableflip/ipfs-friends/status.svg)](https://david-dm.org/tableflip/ipfs-friends) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 > get by with a little help from your friends (to share files)
 
 Turn IPFS peers in to file sharing friends.
