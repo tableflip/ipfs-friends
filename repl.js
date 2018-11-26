@@ -1,4 +1,4 @@
-const debug = require('debug')('ipfs-friends:repl')
+const log = require('debug')('ipfs-friends:repl')
 
 const { read } = require('./read')
 const { evaluate } = require('./eval')
@@ -17,7 +17,7 @@ module.exports = async function repl (ctx, opts) {
     const { input } = await opts.read(ctx)
     let [ cmd, ...cmdArgs ] = input.split(' ').filter(Boolean)
 
-    debug(cmd, cmdArgs)
+    log(cmd, cmdArgs)
 
     await print(async () => {
       const res = await opts.evaluate(ctx, cmd, cmdArgs)

@@ -1,5 +1,5 @@
 const Chalk = require('chalk')
-const debug = require('debug')('ipfs-friends:print')
+const log = require('debug')('ipfs-friends:print')
 
 module.exports = async function print (func) {
   try {
@@ -12,7 +12,7 @@ module.exports = async function print (func) {
       }
     }
   } catch (err) {
-    debug(err)
+    log(err)
     console.error(`${Chalk.red('✖')} ${err}`)
   }
 }

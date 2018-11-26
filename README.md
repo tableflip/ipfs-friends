@@ -4,7 +4,25 @@
 
 Turn IPFS peers in to file sharing friends.
 
-## CLI
+## Install
+
+```sh
+npm install -g ipfs-friends
+```
+
+## Usage
+
+### CLI
+
+1. Install IPFS (JS or Go flavour).
+2. Start your daemon (with pubsub enabled):
+    ```sh
+    (js)ipfs dameon --enable-pubsub-experiment
+    ```
+3. Start friends:
+    ```sh
+    friends
+    ```
 
 ```console
 # It all starts with friends
